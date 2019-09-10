@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      Mian page
+      Mian page 1
     </div>
   );
 }
