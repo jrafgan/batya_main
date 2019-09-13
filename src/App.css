@@ -1,5 +1,6 @@
 .App {
-  background-image: url("assets/images/fon.jpg");
+    background-image: url("assets/images/fon.jpg");
+    height: fit-content;
 }
 
 .icon_div {
@@ -20,7 +21,9 @@
     box-shadow: 0 4px #666;
 }
 
-.icon:hover {background-color: #3e8e41}
+.icon:hover {
+    background-color: #3e8e41
+}
 
 .icon_fb {
     background-position: 120px 0;
@@ -37,6 +40,7 @@
 .icon_ok {
     background-position: 48px 0;
 }
+
 .icon_in {
     background-position: 24px 0;
 }

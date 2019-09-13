@@ -3,6 +3,7 @@ import TextField from '@material-ui/core/TextField';
 import {withStyles} from "@material-ui/styles";
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 import Button from "@material-ui/core/Button";
+import Paper from "@material-ui/core/Paper";
 
 const styles = () => ({
     container: {
@@ -10,9 +11,10 @@ const styles = () => ({
         flexWrap: 'wrap',
         flexDirection: 'column',
         width: 300,
-        margin: '50px auto',
+        margin: 'auto',
         border: '1px solid',
-        borderRadius: 5
+        borderRadius: 5,
+        background: '#fff'
     },
     textField: {
         marginLeft: 8,
@@ -26,7 +28,17 @@ const styles = () => ({
 
     },
     button: {
-        margin: '20px auto'
+        margin: '20px auto',
+        background: 'rgb(85, 26, 139);'
+    },
+    main: {
+        display: "flex",
+        padding: 16,
+        textAlign: 'center',
+        color: "#000",
+        background: "#e1e2e6",
+        marginTop: 5,
+        flexDirection: "column"
     }
 });
 
@@ -37,10 +49,6 @@ class ContactUs extends Component {
         email: '',
         message: ''
     };
-
-    componentDidUpdate(prevProps) {
-        return prevProps.message !== this.props.message;
-    }
 
     submitHandler = e => {
         e.preventDefault();
@@ -72,7 +80,7 @@ class ContactUs extends Component {
     render() {
         const {classes} = this.props;
         return (
-            <Fragment>
+            <Paper className={classes.main}>
                 <form onSubmit={this.submitHandler}
                       className={classes.container}
                 >
@@ -118,11 +126,8 @@ class ContactUs extends Component {
                     >
                         Отправить
                     </Button>
-                    {this.state.mailSent &&
-                    <div>Thank you for contcting us.</div>}
-                    }
                 </form>
-            </Fragment>
+            </Paper>
         )
     }
 }
