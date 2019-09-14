@@ -27,11 +27,8 @@ const styles = () => ({
         alignItems: 'stretch'
     },
     menu_div: {
-        display: "inline-flex",
-        height: "100%",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        width: "fit-content"
+        display: "grid",
+        gridTemplateRows: 'auto auto'
     },
     link: {
         display: "block",
@@ -40,7 +37,8 @@ const styles = () => ({
     link1: {
         display: "flex",
         textDecoration: "none",
-        marginBottom: 10
+        marginBottom: 10,
+        justifyContent: 'start'
     },
     title: {
         display: "inline-flex",
@@ -56,12 +54,63 @@ const styles = () => ({
         top: -18,
         right: 0,
         height: 109
+    },
+    "@media (max-width: 959px)": {
+        image: {
+            top: 20
+        },
+        link: {
+            textAlign: 'left'
+        },
+        link1: {
+            marginBottom: 0,
+            paddingTop: 30
+        }
+    },
+    "@media (max-width: 733px)": {
+        image: {
+            right: 26
+        }
+    },
+    "@media (max-width: 599px)": {
+        link1: {
+            marginBottom: 10,
+            paddingTop: 0,
+            paddingLeft: 16
+        },
+        link: {
+            paddingLeft: 16
+        },
+        image: {
+            top: -18
+        },
+        paper: {
+            width: '100%',
+            padding: '16px 0'
+        }
+    },
+    "@media (max-width: 500px)": {
+        paper: {
+            flexDirection: 'column',
+            textAlign: 'center'
+        },
+        menu_div: {
+            textAlign: 'center'
+        },
+        title: {
+            justifyContent: 'center'
+        }
+    },
+    "@media (max-width: 341px)": {
+        image: {
+            top: 20
+        }
     }
 });
 
 class App extends Component {
 
-    handler = link => {
+    handler = () => {
         alert("Создайте аккаунт в соц сетях")
     };
 
@@ -71,10 +120,12 @@ class App extends Component {
             <div className="App">
                 <div className={classes.root}>
                     <Grid container spacing={1}>
-                        <Grid item xs={12} sm={2} className={classes.grid}>
-                            <Paper className={classes.paper}>Здесь может быть ваша реклама</Paper>
+                        <Grid item xs={12} sm={3} md={2} className={classes.grid} >
+                            <Paper className={classes.paper}>
+                                <div className="sidebar_text">Здесь может быть ваша реклама</div>
+                            </Paper>
                         </Grid>
-                        <Grid item xs={12} sm={8}>
+                        <Grid item xs={12} sm={6} md={8}>
                             <Paper className={classes.paper}>
                                 <div className={classes.menu_div}>
                                     <Link className={classes.link1} to="/">Главная</Link>
@@ -111,8 +162,10 @@ class App extends Component {
                                 </div>
                             </Paper>
                         </Grid>
-                        <Grid item xs={12} sm={2} className={classes.grid}>
-                            <Paper className={classes.paper}>Здесь может быть ваша реклама</Paper>
+                        <Grid item xs={12} sm={3} md={2} className={classes.grid}>
+                            <Paper className={classes.paper}>
+                                <div className="sidebar_text">Здесь может быть ваша реклама</div>
+                            </Paper>
                         </Grid>
                     </Grid>
                 </div>

@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import Paper from '@material-ui/core/Paper';
-import ButtonImg from "../assets/images/main_btn.gif";
 import {withStyles} from "@material-ui/styles";
-import {withMobileDialog} from "@material-ui/core";
+import Button from "@material-ui/core/Button";
 
 const styles = () => ({
     paper: {
@@ -26,10 +25,10 @@ const styles = () => ({
     text_div: {
         textAlign: "left"
     },
-    btn_gif: {
-        width: "50%",
-        cursor: "pointer"
-    }
+    button: {
+        margin: '20px auto',
+        background: 'rgb(85, 26, 139);'
+    },
 });
 
 class FullWidthGrid extends Component {
@@ -87,8 +86,15 @@ class FullWidthGrid extends Component {
                     </p>
                 </div>
                 <div className={classes.button_div}>
-                    <img src={ButtonImg} alt="main button" className={classes.btn_gif}
-                         onClick={this.getLink}/>
+                    <Button
+                        onClick={this.getLink}
+                        variant="contained"
+                        color="primary"
+                        size="small"
+                        className={classes.button}
+                    >
+                        Вперед
+                    </Button>
                 </div>
             </Paper>
         );
