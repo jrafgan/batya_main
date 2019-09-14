@@ -110,6 +110,18 @@ const styles = () => ({
 
 class App extends Component {
 
+    componentDidMount() {
+
+        const script = document.createElement("script");
+
+        script.src = "//usocial.pro/usocial/usocial.js?v=6.1.4";
+        script.async = true;
+        script["data-script"] = "usocial";
+
+        const node = document.getElementById("icon_div");
+        node.prepend(script);
+    }
+
     handler = () => {
         alert("Создайте аккаунт в соц сетях")
     };
@@ -148,13 +160,12 @@ class App extends Component {
                                         <p>Если Вам понравился наш сайт,</p>
                                         <p>поделитесь информацией о нас в соц. сетях:</p>
                                     </div>
-                                    <div className="icon_div">
-                                        <div className="icon icon_vk" onClick={this.handler}/>
-                                        <div className="icon icon_fb" onClick={this.handler}/>
-                                        <div className="icon icon_tw" onClick={this.handler}/>
-                                        <div className="icon icon_gplus" onClick={this.handler}/>
-                                        <div className="icon icon_ok" onClick={this.handler}/>
-                                        <div className="icon icon_in" onClick={this.handler}/>
+                                    <div className="icon_div" id="icon_div">
+                                        <div className="uSocial-Share" data-pid="c70c8fbc57456afe47984205e0ebe497"
+                                             data-type="share"
+                                             data-options="round-rect,style1,default,absolute,horizontal,size24,eachCounter0,counter0,upArrow-left"
+                                             data-social="vk,fb,twi,mail,lin,ok,pinterest"
+                                             data-mobile="vi,wa,sms" />
                                     </div>
                                     <div className="footer_bottom">
                                         <p>По вопросам размещения рекламы обращайтесь на: diesel.1985@mial.ru</p>
