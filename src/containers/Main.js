@@ -23,17 +23,18 @@ const styles = () => ({
         flexDirection: "column"
     },
     text_div: {
-        textAlign: "left"
+        textAlign: "left",
+        width: 400
     },
     button: {
         margin: '20px auto',
         background: 'rgb(85, 26, 139);'
     },
-    "@media (min-width: 960px)": {
-        button_div: {
-            marginBottom: 80
-        }
-    }
+    // "@media (min-width: 960px)": {
+    //     button_div: {
+    //         marginBottom: 80
+    //     }
+    // }
 });
 
 class FullWidthGrid extends Component {

@@ -20,7 +20,7 @@ const styles = () => ({
         color: "#000",
         background: "#e1e2e6",
         marginTop: 5,
-        justifyContent: "space-between"
+        //justifyContent: "flex-start"
     },
     grid: {
         display: 'flex',
@@ -47,7 +47,8 @@ const styles = () => ({
         fontSize: 54,
         position: "relative",
         paddingRight: 100,
-        fontFamily: 'Caveat, cursive'
+        fontFamily: 'Caveat, cursive',
+        margin: '0 auto'
     },
     image: {
         position: "absolute",
