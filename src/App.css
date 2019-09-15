@@ -1,5 +1,5 @@
 .App {
-    /*background-image: url("assets/images/fon.jpg");*/
+    background-image: url("assets/images/fon.jpg");
     height: fit-content;
     min-height: 100vh;
 }
@@ -48,7 +48,7 @@
 
 .footer_text {
     text-align: left;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .footer_bottom {
@@ -69,10 +69,6 @@
     margin: 0 auto;
 }
 
-.sidebar_text {
-    padding-left: 16px;
-}
-
 .form_select {
     width: 280px;
     margin: 8px;
@@ -83,9 +79,15 @@
 }
 
 .text_div {
-    text-align: left;
-    width: 400px;
+    text-align: justify;
+    width: 530px;
     margin: 0 auto;
+    font-size: 18px;
+    font-stretch: expanded;
+}
+
+.h6 {
+    text-align: center;
 }
 
 @media only screen and (max-width: 960px) {
@@ -96,9 +98,7 @@
     .footer_text {
         text-align: center;
     }
-}
 
-@media only screen and (max-width: 888px) {
     .text_div {
         width: auto;
     }

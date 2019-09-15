@@ -8,6 +8,7 @@ import Paper from "@material-ui/core/Paper";
 import QuestionSign from "./assets/images/vopros.png";
 import {withStyles} from "@material-ui/styles";
 import Typography from "@material-ui/core/Typography";
+import clsx from 'clsx';
 
 const styles = () => ({
     root: {
@@ -19,8 +20,14 @@ const styles = () => ({
         padding: 16,
         textAlign: 'center',
         color: "#000",
-        background: "#e1e2e6",
-        marginTop: 5,
+        background: "#f3f4f7",
+        margin: '13px auto 0',
+    },
+    title_paper: {
+        padding: 0
+    },
+    footer_paper: {
+        marginTop: 5
     },
     grid: {
         display: 'flex',
@@ -32,17 +39,20 @@ const styles = () => ({
     },
     link: {
         display: "block",
-        textDecoration: "none"
+        textDecoration: "none",
+        paddingTop: 10,
+        paddingLeft: 16
     },
     link1: {
         display: "flex",
         textDecoration: "none",
-        justifyContent: 'start'
+        justifyContent: 'start',
+        paddingTop: 16,
+        paddingLeft: 16
     },
     title: {
         display: "inline-flex",
         textShadow: "3px 3px 2px rgba(150, 150, 150, 1)",
-        //fontSize: 54,
         position: "relative",
         paddingRight: 100,
         margin: '0 auto',
@@ -54,9 +64,9 @@ const styles = () => ({
     },
     image: {
         position: "absolute",
-        top: -5,
+        top: -12,
         right: 0,
-        height: 109
+        height: 120
     },
     "@media (max-width: 959px)": {
         image: {
@@ -77,6 +87,12 @@ const styles = () => ({
         image: {
             top: 0
         },
+        link: {
+            paddingTop: 0
+        },
+        link1: {
+            paddingTop: 18
+        }
     },
     "@media (max-width: 733px)": {
         image: {
@@ -149,7 +165,7 @@ class App extends Component {
                             </Paper>
                         </Grid>
                         <Grid item xs={12} sm={6} md={8}>
-                            <Paper className={classes.paper}>
+                            <Paper className={clsx(classes.paper, classes.title_paper)}>
                                 <div className={classes.menu_div}>
                                     <Link className={classes.link1} to="/">Главная</Link>
                                     <Link className={classes.link} to="/contact_us">Обратная связь</Link>
@@ -165,7 +181,7 @@ class App extends Component {
                                 <Route path="/contact_us" exact component={Contact}/>
                             </Switch>
 
-                            <Paper className={classes.paper}>
+                            <Paper className={clsx(classes.paper, classes.footer_paper)}>
                                 <div className="footer">
                                     <div className="footer_text">
                                         <p>Если Вам понравился наш сайт,</p>

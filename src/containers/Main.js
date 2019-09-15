@@ -19,18 +19,13 @@ const styles = () => ({
         padding: 16,
         textAlign: 'center',
         color: "#000",
-        background: "#e1e2e6",
+        background: "#f3f4f7",
         marginTop: 5,
         flexDirection: "column"
     },
     button: {
         margin: '20px auto',
         background: 'rgb(85, 26, 139);'
-    },
-    "@media (max-width: 888px)": {
-        text_div: {
-            width: 'auto'
-        }
     }
 });
 
@@ -52,7 +47,7 @@ class FullWidthGrid extends Component {
 
     updateData = result => {
         const data = result.data;
-        this.setState({data}, console.log(this.state.data));
+        this.setState({data});
     };
 
     getLink = () => {
