@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Paper from '@material-ui/core/Paper';
 import {withStyles} from "@material-ui/styles";
 import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
 
 const styles = () => ({
     paper: {
@@ -22,19 +23,15 @@ const styles = () => ({
         marginTop: 5,
         flexDirection: "column"
     },
-    text_div: {
-        textAlign: "left",
-        width: 400
-    },
     button: {
         margin: '20px auto',
         background: 'rgb(85, 26, 139);'
     },
-    // "@media (min-width: 960px)": {
-    //     button_div: {
-    //         marginBottom: 80
-    //     }
-    // }
+    "@media (max-width: 888px)": {
+        text_div: {
+            width: 'auto'
+        }
+    }
 });
 
 class FullWidthGrid extends Component {
@@ -73,12 +70,11 @@ class FullWidthGrid extends Component {
         const {classes} = this.props;
         return (
             <Paper className={classes.main}>
-                <div className={classes.text_div}>
-                    <p>
-                        Извечный вопрос – «Что делать?».
-                        <br/>
-                        Порой мы не знаем чем занять несколько свободных минут или часов. А для кого-то этот
-                        вопрос стоит еще более глобально, в масштабах всей жизни. Предлагаем вам
+                <div className="text_div">
+                    <Typography variant="h6" component="h6" className="h6">Извечный вопрос – «Что делать?».</Typography>
+                        <p className="p">Порой мы не знаем чем занять несколько свободных минут или часов. А для кого-то этот
+                            вопрос стоит еще более глобально, в масштабах всей жизни. </p>
+                            <p className="p">Предлагаем вам
                         воспользоваться
                         нашим сервисом, где в один клик вы будете перенаправлены на случайный материал в
                         интернете. Мы постарались отобрать только полезные и познавательные статьи, видео и
@@ -88,8 +84,7 @@ class FullWidthGrid extends Component {
                         людям
                         иногда попадается именно та информация, которая им нужна на данный момент. Добро
                         пожаловать на наш сервис, надеемся, он будет для вас полезным. Просто кликните на
-                        кнопку!
-                    </p>
+                            кнопку!</p>
                 </div>
                 <div className={classes.button_div}>
                     <Button

@@ -7,6 +7,7 @@ import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import QuestionSign from "./assets/images/vopros.png";
 import {withStyles} from "@material-ui/styles";
+import Typography from "@material-ui/core/Typography";
 
 const styles = () => ({
     root: {
@@ -20,7 +21,6 @@ const styles = () => ({
         color: "#000",
         background: "#e1e2e6",
         marginTop: 5,
-        //justifyContent: "flex-start"
     },
     grid: {
         display: 'flex',
@@ -37,28 +37,30 @@ const styles = () => ({
     link1: {
         display: "flex",
         textDecoration: "none",
-        marginBottom: 10,
         justifyContent: 'start'
     },
     title: {
         display: "inline-flex",
         textShadow: "3px 3px 2px rgba(150, 150, 150, 1)",
-        fontWeight: 700,
-        fontSize: 54,
+        //fontSize: 54,
         position: "relative",
         paddingRight: 100,
+        margin: '0 auto',
+        lineHeight: 1
+    },
+    h2: {
         fontFamily: 'Caveat, cursive',
-        margin: '0 auto'
+        fontWeight: 700,
     },
     image: {
         position: "absolute",
-        top: -18,
+        top: -5,
         right: 0,
         height: 109
     },
     "@media (max-width: 959px)": {
         image: {
-            top: 20
+            top: 75
         },
         link: {
             textAlign: 'left'
@@ -67,6 +69,14 @@ const styles = () => ({
             marginBottom: 0,
             paddingTop: 30
         }
+    },
+    "@media (max-width: 860px)": {
+        h2: {
+            fontSize: 54,
+        },
+        image: {
+            top: 0
+        },
     },
     "@media (max-width: 733px)": {
         image: {
@@ -83,7 +93,7 @@ const styles = () => ({
             paddingLeft: 16
         },
         image: {
-            top: -18
+            top: -28
         },
         paper: {
             width: '100%',
@@ -104,7 +114,7 @@ const styles = () => ({
     },
     "@media (max-width: 341px)": {
         image: {
-            top: 20
+            top: 25
         }
     }
 });
@@ -145,7 +155,7 @@ class App extends Component {
                                     <Link className={classes.link} to="/contact_us">Обратная связь</Link>
                                 </div>
                                 <div className={classes.title}>
-                                    Что делать
+                                    <Typography variant="h1" component="h2" className={classes.h2}>Что делать</Typography>
                                     <img src={QuestionSign} alt="question sign" className={classes.image}/>
                                 </div>
                             </Paper>
