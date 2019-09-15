@@ -70,7 +70,7 @@ const styles = () => ({
     },
     "@media (max-width: 959px)": {
         image: {
-            top: 75
+            top: 82
         },
         link: {
             textAlign: 'left'
@@ -109,7 +109,7 @@ const styles = () => ({
             paddingLeft: 16
         },
         image: {
-            top: -28
+            top: -40
         },
         paper: {
             width: '100%',
@@ -128,9 +128,9 @@ const styles = () => ({
             justifyContent: 'center'
         }
     },
-    "@media (max-width: 341px)": {
+    "@media (max-width: 332px)": {
         image: {
-            top: 25
+
         }
     }
 });

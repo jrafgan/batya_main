@@ -10,7 +10,7 @@ const styles = () => ({
         padding: 16,
         textAlign: 'center',
         color: "#000",
-        background: "#e1e2e6",
+        background: "#f3f4f7",
         marginTop: 5,
         justifyContent: "space-between"
     },
