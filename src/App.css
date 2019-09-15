@@ -1,6 +1,7 @@
 .App {
     background-image: url("assets/images/fon.jpg");
     height: fit-content;
+    min-height: 100vh;
 }
 
 .icon_div {
@@ -72,6 +73,11 @@
     padding-left: 16px;
 }
 
+.form_select {
+    width: 280px;
+    margin: 8px;
+}
+
 @media only screen and (max-width: 960px) {
     .footer > div {
         width: 100%;
@@ -88,14 +94,33 @@
     }
 
     .footer > div {
-        width: 50%;
+        width: 90%;
+        margin: 0;
     }
 
     .footer_text {
-        text-align: left;
+        text-align: center;
     }
 
     .sidebar_text {
         margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 730px) {
+    .form_select {
+        width: 263px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .form_select {
+        width: 243px;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .form_select {
+        width: 263px;
     }
 }
