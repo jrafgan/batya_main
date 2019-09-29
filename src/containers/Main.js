@@ -43,7 +43,6 @@ class FullWidthGrid extends Component {
             skipEmptyLines: true,
             complete: this.updateData
         });
-        alert("This is test");
     }
 
     updateData = result => {
