@@ -195,7 +195,7 @@ class App extends Component {
                                              data-mobile="vi,wa,sms" />
                                     </div>
                                     <div className="footer_bottom">
-                                        <p>По вопросам размещения рекламы обращайтесь на: diesel.1985@mial.ru</p>
+                                        <p>По вопросам размещения рекламы обращайтесь на: diesel.1985@mail.ru</p>
                                     </div>
                                 </div>
                             </Paper>

@@ -4,7 +4,7 @@
   "private": true,
   "engines": {
     "node": "10.16.3",
-    "yarn": "1.17.3",
+    "yarn": "1.19.0",
     "npm": "6.9.0"
   },
   "dependencies": {
@@ -39,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "git@github.com:jrafgan/batya_main.git",
+  "author": "Maksat Duishenaliev <maksatovy@gmail.com>",
+  "license": "MIT"
 }
